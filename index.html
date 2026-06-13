@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joe Nithin S | 3D Premium Portfolio | AI & Robotics Engineer</title>
+  <meta name="description" content="Portfolio of Joe Nithin S - B.E Computer Science Engineering (AI & Robotics) student, specializing in Face Recognition, Drones, Machine Learning, and Full-Stack Web Development.">
+  
+  <!-- Canonical Public URL -->
+  <link rel="canonical" href="https://joenithinportfolio.netlify.app/">
+
+  <!-- Open Graph / Social Media Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://joenithinportfolio.netlify.app/">
+  <meta property="og:title" content="Joe Nithin S | AI & Robotics Portfolio">
+  <meta property="og:description" content="3D Premium Portfolio of Joe Nithin S — AI, Robotics, Face Recognition, Drones & Full-Stack Web Dev.">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://joenithinportfolio.netlify.app/">
+  <meta name="twitter:title" content="Joe Nithin S | AI & Robotics Portfolio">
+  <meta name="twitter:description" content="3D Premium Portfolio of Joe Nithin S — AI, Robotics, Face Recognition, Drones & Full-Stack Web Dev.">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Three.js Background Container -->
+  <div id="canvas-container"></div>
+  <div id="grid-overlay"></div>
+
+  <!-- HUD Header Navigation -->
+  <header id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="logo" id="nav-logo">
+        <span class="logo-dot"></span>JOE NITHIN S
+      </a>
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="sound-toggle muted" id="sound-btn" title="Toggle UI Sound Effects">
+        <div class="sound-wave">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <span id="sound-status">Sound Off</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span> AI & Robotics Specialist
+        </div>
+        <h1 class="hero-title">
+          <span>JOE NITHIN S</span>
+          <span class="highlight">Future of AI & Robotics</span>
+        </h1>
+        <p class="hero-subtitle">
+          Computer Science Engineering student specializing in Artificial Intelligence and Robotics. Experienced in building face recognition security systems, smart drone architectures, and premium full-stack web applications.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary" id="hero-btn-projects">Explore Projects</a>
+          <a href="#contact" class="btn btn-secondary" id="hero-btn-contact">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hud-ring"></div>
+        <!-- Three.js will attach interactive neural network structure inside this area or let it rotate relative to the background -->
+      </div>
+    </div>
+    <div class="scroll-indicator" id="scroll-mouse-btn">
+      <span>Scroll Down</span>
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT & EDUCATION SECTION -->
+  <section id="about">
+    <div class="container">
+      <span class="section-tag">// Profile</span>
+      <h2 class="section-title">Career Objective & Education</h2>
+      <div class="about-grid">
+        <div class="glass-panel about-card">
+          <div class="about-text">
+            <p>
+              I am an ambitious Computer Science Engineering student specializing in **Artificial Intelligence and Robotics**. My passion lies at the intersection of computer vision, embedded intelligence, autonomous robotics, and modern web systems.
+            </p>
+            <p>
+              With practical experience developing deep learning face recognition models, flight-stabilized drones, and database-driven web engines, I combine hardware precision with high-performance software engineering.
+            </p>
+            <p>
+              Currently, I am looking to apply and expand my technical capabilities through an internship opportunity that challenges me to solve complex, real-world problems.
+            </p>
+          </div>
+        </div>
+        <div class="glass-panel about-card">
+          <h3 class="timeline-title" style="margin-bottom: 2rem; color: #fff; font-family: var(--font-hud); font-size: 1.1rem; letter-spacing: 1px;">Education Timeline</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2024 — 2028</div>
+              <div class="timeline-title">B.E — Computer Science Engineering</div>
+              <div class="timeline-sub">Sathyabama Institute of Science and Technology, Chennai, India</div>
+              <div class="timeline-detail">Specialization: Artificial Intelligence & Robotics</div>
+              <div class="timeline-detail" style="margin-top: 0.25rem; color: var(--neon-pink);">CGPA: 7.80 / 10.00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNICAL SKILLS SECTION -->
+  <section id="skills">
+    <div class="container">
+      <span class="section-tag">// Capabilities</span>
+      <h2 class="section-title">Technical Skillset</h2>
+      <div class="skills-grid">
+        <!-- Category 1 -->
+        <div class="glass-panel skill-category">
+          <h3>Languages & Tools</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Python</span>
+                <span class="skill-val">90%</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" data-width="90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">C++</span>
+                <span class="skill-val">80%</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" data-width="80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-val">85%</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" data-width="85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Git & GitHub</span>
+                <span class="skill-val">85%</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" data-width="85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="glass-panel skill-category">
+          <h3>AI & Machine Learning</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Computer Vision & OpenCV</span>
+                <span class="skill-val">88%</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" data-width="88%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Neural Networks & ML</span>
+                <span class="skill-val">80%</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" data-width="80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Image Processing</span>
+                <span class="skill-val">85%</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" data-width="85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Blender & SolidWorks</span>
+                <span class="skill-val">75%</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" data-width="75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="glass-panel skill-category">
+          <h3>Web Dev & Hardware</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">React.js & Full-Stack</span>
+                <span class="skill-val">80%</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" data-width="80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Arduino & Embedded Logic</span>
+                <span class="skill-val">85%</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" data-width="85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">MySQL & REST APIs</span>
+                <span class="skill-val">82%</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" data-width="82%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Drone flight control systems</span>
+                <span class="skill-val">80%</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" data-width="80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <div class="container">
+      <span class="section-tag">// Showcases</span>
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-layout">
+        
+        <!-- Project 1: Face Recognition -->
+        <div class="project-node">
+          <div class="glass-panel project-info-panel" id="project-card-facerec">
+            <div class="project-header">
+              <div>
+                <span class="project-meta">Computer Vision & AI</span>
+                <h3 class="project-title">Face Recognition Security</h3>
+              </div>
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">OpenCV</span>
+              <span class="tech-tag">Machine Learning</span>
+              <span class="tech-tag">Image Processing</span>
+            </div>
+            <p class="project-desc">
+              A real-time face detection and identification network developed for smart home automation, offering robust video classifications with ultra-low latency.
+            </p>
+            <ul class="project-bullets">
+              <li>Engineered custom image pipelines processing live video streams to identify users.</li>
+              <li>Integrated warning triggers and security metrics to monitor authorization zones.</li>
+              <li>Optimized neural classifiers yielding minimal frame-rate delays under fluctuating lighting conditions.</li>
+            </ul>
+          </div>
+          <div class="project-canvas-panel" id="canvas-panel-facerec">
+            <canvas class="project-canvas" id="canvas-facerec"></canvas>
+            <div class="canvas-hint">Drag to rotate 3D scanner</div>
+          </div>
+        </div>
+
+        <!-- Project 2: Full-Stack Web App -->
+        <div class="project-node">
+          <div class="glass-panel project-info-panel" id="project-card-fullstack">
+            <div class="project-header">
+              <div>
+                <span class="project-meta">Web Architecture</span>
+                <h3 class="project-title">Full-Stack Data Application</h3>
+              </div>
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">HTML5/CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">REST APIs</span>
+            </div>
+            <p class="project-desc">
+              A responsive client-server database platform structured with relational storage modeling and dynamically rendered visual layers.
+            </p>
+            <ul class="project-bullets">
+              <li>Configured a structured database back-end storing dynamic app content.</li>
+              <li>Programmed functional REST endpoints facilitating immediate state updates.</li>
+              <li>Applied advanced UX layout architectures optimizing compatibility across various device breakpoints.</li>
+            </ul>
+          </div>
+          <div class="project-canvas-panel" id="canvas-panel-fullstack">
+            <canvas class="project-canvas" id="canvas-fullstack"></canvas>
+            <div class="canvas-hint">Drag to rotate database layers</div>
+          </div>
+        </div>
+
+        <!-- Project 3: Arduino Drone System -->
+        <div class="project-node">
+          <div class="glass-panel project-info-panel" id="project-card-drone">
+            <div class="project-header">
+              <div>
+                <span class="project-meta">Robotics & Hardware</span>
+                <h3 class="project-title">Arduino Quadcopter System</h3>
+              </div>
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">Arduino</span>
+              <span class="tech-tag">Sensors</span>
+              <span class="tech-tag">Embedded C++</span>
+              <span class="tech-tag">Flight Control</span>
+            </div>
+            <p class="project-desc">
+              A physical quadcopter prototype featuring customized flight-stabilization logic and telemetry sensors integrated for smooth flight paths.
+            </p>
+            <ul class="project-bullets">
+              <li>Assembled physical quadcopter framework with ESCs, motors, and flight control chips.</li>
+              <li>Programmed stabilization algorithms utilizing gyroscope and accelerometer signals.</li>
+              <li>Implemented real-time sensor loops adjusting individual rotor throttle vectors dynamically.</li>
+            </ul>
+          </div>
+          <div class="project-canvas-panel" id="canvas-panel-drone">
+            <canvas class="project-canvas" id="canvas-drone"></canvas>
+            <div class="canvas-hint">Drag to rotate quadcopter model</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <div class="container">
+      <span class="section-tag">// Network</span>
+      <h2 class="section-title" style="text-align: center;">Get In Touch</h2>
+      <div class="glass-panel contact-card">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div>
+              <p class="contact-sub">Let's discuss opportunities, collaborations, or internships.</p>
+              <div class="contact-methods">
+                
+                <a href="mailto:joenithin007@gmail.com" class="contact-item" id="contact-email">
+                  <div class="contact-icon-wrapper"><i class="fa-solid fa-envelope"></i></div>
+                  <div>
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value">joenithin007@gmail.com</span>
+                  </div>
+                </a>
+
+                <a href="tel:+919043645695" class="contact-item" id="contact-phone">
+                  <div class="contact-icon-wrapper"><i class="fa-solid fa-phone"></i></div>
+                  <div>
+                    <span class="contact-label">Phone</span>
+                    <span class="contact-value">+91 90436 45695</span>
+                  </div>
+                </a>
+
+                <a href="https://linkedin.com/in/joe-nithin-s" target="_blank" rel="noopener noreferrer" class="contact-item" id="contact-linkedin">
+                  <div class="contact-icon-wrapper"><i class="fa-brands fa-linkedin-in"></i></div>
+                  <div>
+                    <span class="contact-label">LinkedIn</span>
+                    <span class="contact-value">linkedin.com/in/joe-nithin-s</span>
+                  </div>
+                </a>
+
+                <a href="https://github.com/joenithin007" target="_blank" rel="noopener noreferrer" class="contact-item" id="contact-github">
+                  <div class="contact-icon-wrapper"><i class="fa-brands fa-github"></i></div>
+                  <div>
+                    <span class="contact-label">GitHub</span>
+                    <span class="contact-value">github.com/joenithin007</span>
+                  </div>
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Cyber Form -->
+          <form class="contact-form" id="cyber-contact-form">
+            <input type="hidden" name="_subject" value="New Secure Message from Portfolio">
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="form-group">
+              <label for="form-name">Sender Name</label>
+              <input type="text" name="name" id="form-name" placeholder="John Doe" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="form-email">Email Address</label>
+              <input type="email" name="email" id="form-email" placeholder="john@example.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="form-msg">Secure Transmission</label>
+              <textarea name="message" id="form-msg" rows="4" placeholder="Your message here..." required></textarea>
+            </div>
+            <div class="contact-submit">
+              <button type="submit" class="btn btn-primary" id="form-submit-btn">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <div class="copyright">
+        &copy; 2026 Joe Nithin S &nbsp;&mdash;&nbsp; <a href="https://joenithinportfolio.netlify.app/" style="color: var(--neon-cyan); text-decoration: none;">joenithinportfolio.netlify.app</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/joenithin007" target="_blank" rel="noopener noreferrer" class="social-link" id="footer-github">GitHub</a>
+        <a href="https://linkedin.com/in/joe-nithin-s" target="_blank" rel="noopener noreferrer" class="social-link" id="footer-linkedin">LinkedIn</a>
+        <a href="mailto:joenithin007@gmail.com" class="social-link" id="footer-email">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CDNs for Three.js and OrbitControls -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  
+  <!-- Interactive Canvas Logic and Synthesizer -->
+  <script src="app.js"></script>
+</body>
+</html>
